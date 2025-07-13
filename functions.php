@@ -42,6 +42,7 @@ function wpdevs_config() {
         'gallery',
         'caption',
     )); // Enable HTML5 support for search form, comment form, comment list, gallery, and caption
+    add_theme_support('title-tag'); // Enable dynamic title tag support
 }
 
 add_action('after_setup_theme', 'wpdevs_config', 0);

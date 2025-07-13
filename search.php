@@ -26,7 +26,10 @@
                         </article>
 
 
-                <?php endwhile;?>
+                <?php 
+                endwhile;
+                the_posts_pagination(); // Pagination for search results
+                ?>
             </div>
         </main>
     </div>

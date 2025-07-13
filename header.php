@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <title>Document</title> -->
 
     <?php wp_head(); // This function is important for WordPress to load styles and scripts ?>
 </head>

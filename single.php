@@ -19,8 +19,19 @@
                                        
                         <div class="post-content">
                             <?php the_content(); ?>
+                            <?php wp_link_pages(); ?> <!-- For paginated posts / Need to add page breaks on the post first -->
                         </div>
                         </article>
+
+                        <!-- Pagination -->
+                                      <div class="wpdevs-pagination">
+                                        <div class="pages next">
+                                            <?php next_post_link("&laquo; %link"); ?>
+                                        </div>
+                                        <div class="pages old">
+                                            <?php previous_post_link('%link &raquo;'); ?>
+                                        </div>
+                                      </div>
 
                     <?php
                     // If comments are open or we have at least one comment, load up the comment template.
