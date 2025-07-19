@@ -42,6 +42,13 @@
                 
             </section>
 
+            <?php if(is_page('landing-page')) :
+                return; // If the current page is 'landing-page', do not display the header section
+            else :    
+            ?>
+
+            <?php endif; ?>
+
             <section class="menu-area">
                 <div class="container">
                     <nav class="main-menu">
