@@ -4,9 +4,19 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero">
-                        Hero Section
+                    <section class="hero" style="background-image: url('http://wp-dev.local/wp-content/uploads/2025/07/breakingbad-1619015799364-553.jpg');">
+                        <div class="overlay" style="min-height: 800px">
+                            <div class="container">
+                                <div class="hero-items">
+                                    <h1>Lorem ipsum dolor sit amet</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit itaque amet maxime, iusto ipsa sunt quasi a expedita voluptatem at possimus, laudantium sint harum quas ad obcaecati ab officia.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </section>
+
                     <section class="services">
                         <h2>Services</h2>
                         <div class="container">

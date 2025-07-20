@@ -1,5 +1,7 @@
 <?php
 
+require get_template_directory() . '/inc/customizer.php'; // Include customizer file
+
 function wpdevs_load_scripts() {
     // wp_enqueue_style('wpdevs-style', get_stylesheet_uri(), array(), '1.0', 'all'); //To get the main stylesheet
     wp_enqueue_style('wpdevs-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), 'all'); // You will remove this after you have created the style.css file in the theme directory.
@@ -7,7 +9,7 @@ function wpdevs_load_scripts() {
     wp_enqueue_script('dropdown', get_template_directory_uri() . '/js/dropdown.js', array(), 1.0, true); // Load the dropdown.js script
 }
 
-add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');
+add_action('wp_enqueue_scripts', 'wpdevs_load_scripts'); // Hook to enqueue styles and scripts
 
  
 
