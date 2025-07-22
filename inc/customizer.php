@@ -167,6 +167,74 @@ function wpdevs_customizer($wp_customize) {
         )
         );
 
+    // 3 Blog Section
+    $wp_customize->add_section(
+        'sec_blog',
+        array(
+            'title' => 'Blog Section Settings',
+            'description' => 'Customize the blog section.'
+        )
+    );
+
+    // Posts Per Page Setting
+    $wp_customize->add_setting(
+        'set_per_page',
+        array(
+            'type'  => 'theme_mod',
+            'default' => 3,
+            'sanitize_callback' => 'absint', // Sanitize as an absolute integer
+        )
+        );
+
+    $wp_customize->add_control(
+        'set_per_page',
+        array(
+            'label' => 'Posts per page',
+            'description' => 'Please type the number of posts to display on the home page.',
+            'section' => 'sec_blog',
+            'type' => 'number',
+        )
+    );
+
+    // Post Categories to Include Setting
+    $wp_customize->add_setting(
+        'set_category_include',
+        array(
+            'type'  => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field', // Sanitize as text
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_category_include',
+        array(
+            'label' => 'Categories to include',
+            'description' => 'Please enter the category IDs to include, separated by commas.',
+            'section' => 'sec_blog',
+            'type' => 'text',
+        )
+    );
+
+    // Post Categories to Exclude Setting
+    $wp_customize->add_setting(
+        'set_category_exclude',
+        array(
+            'type'  => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field', // Sanitize as text
+        )
+    );
+
+    $wp_customize->add_control(
+        'set_category_exclude',
+        array(
+            'label' => 'Categories to exclude',
+            'description' => 'Please enter the category IDs to exclude, separated by commas.',
+            'section' => 'sec_blog',
+            'type' => 'text',
+        )
+    );
+
 }
 
 add_action('customize_register', 'wpdevs_customizer'); // Hook to register customizer settings

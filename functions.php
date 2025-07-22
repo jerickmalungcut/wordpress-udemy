@@ -14,6 +14,12 @@ add_action('wp_enqueue_scripts', 'wpdevs_load_scripts'); // Hook to enqueue styl
  
 
 function wpdevs_config() {
+
+    $textdomain = 'wpdevs'; // Define the text domain for translations
+    load_theme_textdomain($textdomain, get_template_directory() . '/languages'); // Load the theme text domain for translations
+
+
+
     // Register navigation menus
     register_nav_menus(
         array(
